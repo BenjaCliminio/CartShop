@@ -3,6 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 import "./style/main.css";
+import Footer from './Components/Footer'
 import { GiShoppingBag } from "react-icons/gi";
 import RatingStars from "./Components/RatingStars";
 import ShoppingCart from "./Components/ShoppingCart";
@@ -27,39 +28,39 @@ const products = [
 	},
 	{
 		id: 3,
-		name: "Etiam volutpat aliquam",
-		rating: 3.2,
+		name: "El Monje Que Vendio su Ferrari",
+		rating: 4.6,
 		description:
-			"Praesent et orci vel nunc interdum aliquet et non dolor. Etiam eget finibus justo",
-		price: 99,
-		image: "./assets/images/product-3.png",
+			"El monje que vendió su Ferrari es un libro escrito por Robin Sharma que nos sumerge en la historia de Julian Mantle, un exitoso abogado cuya vida cambia drásticamente...",
+		price: 25,
+		image: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/508491.jpg",
 	},
 	{
 		id: 4,
-		name: "Lorem ipsum dolor",
-		rating: 4.8,
+		name: "Las 48 Leyes del Poder",
+		rating: 3,
 		description:
-			"Duis nibh sapien, placerat non nulla ac, suscipit laoreet tortor.",
-		price: 119,
-		image: "./assets/images/product-4.png",
+			"escrito por Robert Greene, es un estudio profundo sobre las dinámicas del poder y cómo influir en los demás. A través de ejemplos históricos y anécdotas cautivadoras",
+		price: 40,
+		image: "https://pre.tematika.com/media/catalog/Ilhsa/Imagenes/664809.jpg",
 	},
 	{
 		id: 5,
-		name: "Ultrices nisl",
-		rating: 4.5,
+		name: "El arte que todo te importe un Carajo",
+		rating: 2.5,
 		description:
-			"Phasellus condimentum, ante et dictum placerat, nulla ipsum commodo lorem, ut mollis nibh turpis a metus.",
-		price: 85,
-		image: "./assets/images/product-5.jpg",
+			"es una obra escrita por Mark Manson que desafía convenciones sociales y nos lleva a cuestionar nuestras prioridades y valores. ",
+		price: 23,
+		image: "https://images.cdn2.buscalibre.com/fit-in/360x360/ff/2e/ff2e09751f6884757d4d5f25fd7579fb.jpg"
 	},
 	{
 		id: 6,
-		name: "Curabitur in elementum tortor",
-		rating: 3.8,
+		name: "El club de las 5AM",
+		rating: 2.7,
 		description:
-			" Mauris convallis diam nibh, non malesuada enim facilisis non. Etiam sapien augue, molestie a porta sed",
-		price: 149,
-		image: "./assets/images/product-6.png",
+			" es una obra de Robin Sharma que nos revela los beneficios de levantarnos temprano y aprovechar las primeras horas del día para potenciar nuestra productividad y calidad de vida.",
+		price: 32,
+		image: "https://image.cdn0.buscalibre.com/5c81b76f14c761f96b8b4567.RS500x500.jpg",
 	},
 ];
 
@@ -136,7 +137,7 @@ function App() {
 				}
 				onProductRemove={onProductRemove}
 			/>
-			<div className="flex justify-between p-4 w-full shadow-xl ">
+			<div className="flex justify-between h-18 p-4 w-full shadow-xl ">
 				<h3 className="font-bold text-xl">Legendarys Books</h3>
 				<button
 					className="flex text-black"
@@ -155,8 +156,8 @@ function App() {
 				</button>
 			</div>
 			<main>
-				<h2 className="title">
-					Products
+				<h2 className="mt-3 mb-4 font-bold text-xl">
+				<span className="text-red-600">Legendarys Books</span> we are lovers of the heart of reading and the high power that it has to be able to learn and face the challenges that society poses to us every day
 				</h2>
 				<div className="">
 					{products.map((product) => (
@@ -204,6 +205,7 @@ function App() {
 							</div>
 						</div>
 					))}
+					<Footer />
 				</div>
 			</main>
 		</div>

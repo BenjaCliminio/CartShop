@@ -74,14 +74,15 @@
 
 .cart-products img {
 	width: 100px;
-	background-color: #fff;
+	background-color: #eee;
 }
 
 .checkout-btn {
 	background-color: var(--main-color);
 	padding: 10px 20px;
 	font-size: 1rem;
-	color: #fff;
+	border-radius: 10px;
+	color: black;
 	align-self: center;
 	margin: 2rem 0;
 }
